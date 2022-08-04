@@ -39,7 +39,7 @@ const MainDrawer = ({ open, handleDrawerToggle, window }) => {
 					onClose={handleDrawerToggle}
 					ModalProps={{ keepMounted: true }}
 					sx={{
-						display: { xs: "block", lg: "none" },
+						display: { xs: "block" },
 						"& .MuiDrawer-paper": {
 							boxSizing: "border-box",
 							width: drawerWidth,

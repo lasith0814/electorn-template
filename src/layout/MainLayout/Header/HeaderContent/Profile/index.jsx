@@ -83,24 +83,24 @@ const Profile = () => {
 
 	return (
 		<Box sx={{ flexShrink: 0, ml: 0.75 }}>
-			<ButtonBase
-				sx={{
-					p: 0.25,
-					bgcolor: open ? iconBackColorOpen : "transparent",
-					borderRadius: 1,
-					"&:hover": { bgcolor: "secondary.lighter" },
-				}}
-				aria-label="open profile"
-				ref={anchorRef}
-				aria-controls={open ? "profile-grow" : undefined}
-				aria-haspopup="true"
-				onClick={handleToggle}
-			>
-				<Stack direction="row" spacing={2} alignItems="center" sx={{ p: 0.5 }}>
-					<Avatar alt="profile user" src={avatar1} sx={{ width: 32, height: 32 }} />
-					<Typography variant="subtitle1">John Doe</Typography>
-				</Stack>
-			</ButtonBase>
+			<Stack direction="row" spacing={1} alignItems="center" sx={{ p: 0.5 }}>
+				<Typography variant="subtitle1">John Doe</Typography>
+				<ButtonBase
+					sx={{
+						p: 1.25,
+						bgcolor: open ? iconBackColorOpen : "transparent",
+						borderRadius: 50,
+						"&:hover": { bgcolor: "secondary.lighter" },
+					}}
+					aria-label="open profile"
+					ref={anchorRef}
+					aria-controls={open ? "profile-grow" : undefined}
+					aria-haspopup="true"
+					onClick={handleToggle}
+				>
+					<UserOutlined style={{ fontSize: 20 }} />
+				</ButtonBase>
+			</Stack>
 			<Popper
 				placement="bottom-end"
 				open={open}
@@ -135,62 +135,11 @@ const Profile = () => {
 							>
 								<ClickAwayListener onClickAway={handleClose}>
 									<MainCard elevation={0} border={false} content={false}>
-										<CardContent sx={{ px: 2.5, pt: 3 }}>
-											<Grid container justifyContent="space-between" alignItems="center">
-												<Grid item>
-													<Stack direction="row" spacing={1.25} alignItems="center">
-														<Avatar alt="profile user" src={avatar1} sx={{ width: 32, height: 32 }} />
-														<Stack>
-															<Typography variant="h6">John Doe</Typography>
-															<Typography variant="body2" color="textSecondary">
-																UI/UX Designer
-															</Typography>
-														</Stack>
-													</Stack>
-												</Grid>
-												<Grid item>
-													<IconButton size="large" color="secondary" onClick={handleLogout}>
-														<LogoutOutlined />
-													</IconButton>
-												</Grid>
-											</Grid>
-										</CardContent>
 										{open && (
 											<>
-												<Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-													<Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="profile tabs">
-														<Tab
-															sx={{
-																display: "flex",
-																flexDirection: "row",
-																justifyContent: "center",
-																alignItems: "center",
-																textTransform: "capitalize",
-															}}
-															icon={<UserOutlined style={{ marginBottom: 0, marginRight: "10px" }} />}
-															label="Profile"
-															{...a11yProps(0)}
-														/>
-														<Tab
-															sx={{
-																display: "flex",
-																flexDirection: "row",
-																justifyContent: "center",
-																alignItems: "center",
-																textTransform: "capitalize",
-															}}
-															icon={<SettingOutlined style={{ marginBottom: 0, marginRight: "10px" }} />}
-															label="Setting"
-															{...a11yProps(1)}
-														/>
-													</Tabs>
-												</Box>
-												<TabPanel value={value} index={0} dir={theme.direction}>
+												<Box dir={theme.direction}>
 													<ProfileTab handleLogout={handleLogout} />
-												</TabPanel>
-												<TabPanel value={value} index={1} dir={theme.direction}>
-													<SettingTab />
-												</TabPanel>
+												</Box>
 											</>
 										)}
 									</MainCard>
