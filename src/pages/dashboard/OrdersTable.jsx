@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -111,11 +110,6 @@ function OrderTableHead({ order, orderBy }) {
 	);
 }
 
-OrderTableHead.propTypes = {
-	order: PropTypes.string,
-	orderBy: PropTypes.string,
-};
-
 // ==============================|| ORDER TABLE - STATUS ||============================== //
 
 const OrderStatus = ({ status }) => {
@@ -146,10 +140,6 @@ const OrderStatus = ({ status }) => {
 			<Typography>{title}</Typography>
 		</Stack>
 	);
-};
-
-OrderStatus.propTypes = {
-	status: PropTypes.number,
 };
 
 // ==============================|| ORDER TABLE ||============================== //

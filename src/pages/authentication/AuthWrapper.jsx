@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 // material-ui
 import { Box, Grid } from "@mui/material";
 
@@ -47,9 +45,5 @@ const AuthWrapper = ({ children }) => (
 		</Grid>
 	</Box>
 );
-
-AuthWrapper.propTypes = {
-	children: PropTypes.node,
-};
 
 export default AuthWrapper;

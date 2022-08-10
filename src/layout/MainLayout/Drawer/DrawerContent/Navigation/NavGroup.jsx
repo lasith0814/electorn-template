@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
 // material-ui
@@ -44,10 +43,6 @@ const NavGroup = ({ item }) => {
 			{navCollapse}
 		</List>
 	);
-};
-
-NavGroup.propTypes = {
-	item: PropTypes.object,
 };
 
 export default NavGroup;

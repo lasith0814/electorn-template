@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useMemo } from "react";
 
 // material-ui
@@ -55,12 +54,6 @@ const MainDrawer = ({ open, handleDrawerToggle, window }) => {
 			)}
 		</Box>
 	);
-};
-
-MainDrawer.propTypes = {
-	open: PropTypes.bool,
-	handleDrawerToggle: PropTypes.func,
-	window: PropTypes.object,
 };
 
 export default MainDrawer;

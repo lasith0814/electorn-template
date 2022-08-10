@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 // material-ui
 import { useTheme } from "@mui/material/styles";
 import { AppBar, IconButton, Toolbar, useMediaQuery } from "@mui/material";
@@ -59,11 +57,6 @@ const Header = ({ open, handleDrawerToggle }) => {
 			)}
 		</>
 	);
-};
-
-Header.propTypes = {
-	open: PropTypes.bool,
-	handleDrawerToggle: PropTypes.func,
 };
 
 export default Header;

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 // material-ui
@@ -50,10 +49,6 @@ const ComponentSkeleton = ({ children }) => {
 			{!isLoading && children}
 		</>
 	);
-};
-
-ComponentSkeleton.propTypes = {
-	children: PropTypes.node,
 };
 
 export default ComponentSkeleton;

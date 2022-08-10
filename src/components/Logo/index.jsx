@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 // material-ui
@@ -15,10 +14,5 @@ const LogoSection = ({ sx, to }) => (
 		<Logo />
 	</ButtonBase>
 );
-
-LogoSection.propTypes = {
-	sx: PropTypes.object,
-	to: PropTypes.string,
-};
 
 export default LogoSection;

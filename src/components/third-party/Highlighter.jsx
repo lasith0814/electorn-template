@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
 
 // material-ui
@@ -56,10 +55,6 @@ const Highlighter = ({ children }) => {
 			</Collapse>
 		</Box>
 	);
-};
-
-Highlighter.propTypes = {
-	children: PropTypes.node,
 };
 
 export default Highlighter;

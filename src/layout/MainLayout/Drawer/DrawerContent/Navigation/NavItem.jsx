@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { forwardRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -46,7 +45,6 @@ const NavItem = ({ item, level }) => {
 		if (currentIndex > -1) {
 			dispatch(activeItem({ openItem: [item.id] }));
 		}
-		// eslint-disable-next-line
 	}, []);
 
 	const textColor = "text.primary";
@@ -136,11 +134,6 @@ const NavItem = ({ item, level }) => {
 			)}
 		</ListItemButton>
 	);
-};
-
-NavItem.propTypes = {
-	item: PropTypes.object,
-	level: PropTypes.number,
 };
 
 export default NavItem;

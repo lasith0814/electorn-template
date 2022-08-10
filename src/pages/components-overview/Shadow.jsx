@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 // material-ui
 import { useTheme } from "@mui/material/styles";
 import { Grid, Stack, Typography } from "@mui/material";
@@ -21,10 +19,6 @@ function ShadowBox({ shadow }) {
 	);
 }
 
-ShadowBox.propTypes = {
-	shadow: PropTypes.string.isRequired,
-};
-
 // ===============================|| CUSTOM - SHADOW BOX ||=============================== //
 
 function CustomShadowBox({ shadow, label, color, bgcolor }) {
@@ -38,13 +32,6 @@ function CustomShadowBox({ shadow, label, color, bgcolor }) {
 		</MainCard>
 	);
 }
-
-CustomShadowBox.propTypes = {
-	shadow: PropTypes.string.isRequired,
-	color: PropTypes.string.isRequired,
-	label: PropTypes.string.isRequired,
-	bgcolor: PropTypes.string.isRequired,
-};
 
 // ============================|| COMPONENT - SHADOW ||============================ //
 

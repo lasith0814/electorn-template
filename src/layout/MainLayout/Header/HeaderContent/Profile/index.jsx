@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useRef, useState } from "react";
 
 // material-ui
@@ -37,12 +36,6 @@ function TabPanel({ children, value, index, ...other }) {
 		</div>
 	);
 }
-
-TabPanel.propTypes = {
-	children: PropTypes.node,
-	index: PropTypes.any.isRequired,
-	value: PropTypes.any.isRequired,
-};
 
 function a11yProps(index) {
 	return {

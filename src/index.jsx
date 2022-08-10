@@ -15,6 +15,7 @@ import "~/assets/third-party/apex-chart.css";
 import App from "./App";
 import { store } from "~/store";
 
+const { remote } = require("electron");
 // ==============================|| MAIN - REACT DOM RENDER  ||============================== //
 
 ReactDOM.render(
